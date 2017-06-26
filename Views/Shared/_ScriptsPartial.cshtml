@@ -1,0 +1,11 @@
+@using WebApp.Helper
+
+@if(!IsDebuggingService.RunningInDebugMode())
+{
+    //Prod Mode -> Render Scripts
+    @Html.Raw(RenderingHelper.RenderScriptTagsFromPartial("~/Views/Shared/_GeneratedTagsPartial.cshtml"));
+}
+else
+{
+    @Html.Raw(RenderingHelper.RenderScriptTagsFromPartial("~/Views/Shared/_GeneratedTagsPartial.cshtml"));
+}

@@ -1,0 +1,12 @@
+@using WebApp.Helper;
+
+@if (IsDebuggingService.RunningInDebugMode())
+{
+    //Debug Mode -> Render Styles
+    @Html.Raw(RenderingHelper.RenderStyleTagsFromPartial("~/Views/Shared/_GeneratedTagsPartial.cshtml"));
+}
+else
+{
+    //Prod Mode -> Render Styles
+    @Html.Raw(RenderingHelper.RenderStyleTagsFromPartial("~/Views/Shared/_GeneratedTagsPartial.cshtml"));
+}
